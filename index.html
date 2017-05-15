@@ -20,19 +20,24 @@
 	<h1>Dynamic Content Example</h1>
 <!-- Default Dynamic Section -->
 <div id="default-content" class="dynamic-content">
-  This is the default content
+  <p>This is the default content</p>
+	<p><b>$45 OFF</b> ANY GARAGE DOOR REPAIR</p>
+	
 </div>
 <!-- Dynamic Section 1 -->
-<div id="apples" class="dynamic-content">
-  I like apples
+<div id="1" class="dynamic-content">
+  <p>I like apples</p>
+	<p><b>$100 OFF</b> NEW SINGLE GARAGE DOORS</p>
 </div>
 <!-- Dynamic Section 2 -->
-<div id="oranges" class="dynamic-content">
-  I like oranges
+<div id="2" class="dynamic-content">
+  <p>I like oranges</p>
+	<p><b>$125 OFF</b> ANY NEW GARAGE DOOR OPENER</p>
 </div>
 <!-- Dynamic Section 3 -->
-<div id="bananas" class="dynamic-content">
-  I like bananas
+<div id="3" class="dynamic-content">
+  <p>I like bananas</p>
+	<p><b>$200 OFF</b> NEW DOUBLE GARAGE DOORS</p>
 </div>
 
 
@@ -52,21 +57,21 @@
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 	// Give the parameter a variable name
-	var dynamicContent = getParameterByName('dc');
+	var dynamicContent = getParameterByName('offerid');
  
 	 $(document).ready(function() {
  
 		// Check if the URL parameter is apples
-		if (dynamicContent == 'apples') {
-			$('#apples').show();
+		if (dynamicContent == '1') {
+			$('#1').show();
 		} 
 		// Check if the URL parameter is oranges
-		else if (dynamicContent == 'oranges') {
-			$('#oranges').show();
+		else if (dynamicContent == '2') {
+			$('#2').show();
 		} 
 		// Check if the URL parameter is bananas
-		else if (dynamicContent == 'bananas') {
-			$('#bananas').show();
+		else if (dynamicContent == '3') {
+			$('#3').show();
 		} 
 		// Check if the URL parmeter is empty or not defined, display default content
 		else {
